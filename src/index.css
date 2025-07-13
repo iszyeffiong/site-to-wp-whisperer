@@ -15,16 +15,33 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 11% 15%;
 
-    /* GeoTerrain brand colors - professional green palette */
+    /* GeoTerrain Modern Brand Palette */
     --primary: 147 45% 35%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 147 35% 45%;
     --primary-dark: 147 55% 25%;
 
-    /* Earth-inspired accent colors */
+    /* Modern Earth Tones */
     --earth-blue: 200 60% 45%;
     --earth-brown: 25 35% 35%;
     --earth-gold: 45 85% 55%;
+    --earth-sage: 120 25% 65%;
+    
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(147 45% 35%), hsl(147 35% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(147 45% 35% / 0.9), hsl(200 60% 45% / 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Modern Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(210 40% 8% / 0.1), 0 2px 4px -1px hsl(210 40% 8% / 0.06);
+    --shadow-medium: 0 10px 15px -3px hsl(210 40% 8% / 0.1), 0 4px 6px -2px hsl(210 40% 8% / 0.05);
+    --shadow-large: 0 25px 50px -12px hsl(210 40% 8% / 0.25);
+    --shadow-glow: 0 0 0 1px hsl(147 45% 35% / 0.05), 0 1px 3px hsl(147 45% 35% / 0.1);
+
+    /* Modern Spacing */
+    --section-padding: clamp(4rem, 8vw, 8rem);
+    
+    /* Enhanced Colors */
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;

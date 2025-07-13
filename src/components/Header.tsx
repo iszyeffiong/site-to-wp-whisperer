@@ -21,46 +21,52 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-background border-b shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="bg-background/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 transition-all duration-300">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src={logo} 
               alt="GeoTerrain Nigeria Limited" 
-              className="h-12 w-auto"
+              className="h-14 w-auto transition-transform hover:scale-105"
             />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="text-foreground hover:text-primary font-medium transition-colors">
+            <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
               HOME
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#" className="text-foreground hover:text-primary font-medium transition-colors">
+            <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
               WHO WE ARE
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary font-medium transition-colors">
-                SERVICES <ChevronDown className="ml-1 h-4 w-4" />
+              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary font-medium transition-all duration-300 group">
+                SERVICES 
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-lg">
+              <DropdownMenuContent className="bg-background/95 backdrop-blur-lg border border-border/50 shadow-xl rounded-xl p-2 mt-2">
                 {services.map((service) => (
-                  <DropdownMenuItem key={service} className="hover:bg-muted">
-                    <a href="#" className="w-full">{service}</a>
+                  <DropdownMenuItem key={service} className="hover:bg-primary/10 rounded-lg transition-colors duration-200">
+                    <a href="#" className="w-full py-2 px-3 text-sm font-medium">{service}</a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <a href="#" className="text-foreground hover:text-primary font-medium transition-colors">
+            <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
               PROJECTS
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#" className="text-foreground hover:text-primary font-medium transition-colors">
+            <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
               CONTACT US
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#" className="text-foreground hover:text-primary font-medium transition-colors">
+            <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
               CAREER
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
 
@@ -68,38 +74,38 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className="lg:hidden hover:bg-primary/10 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Modern Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
-              <a href="#" className="text-foreground hover:text-primary font-medium">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border/50 shadow-xl">
+            <nav className="container mx-auto px-4 py-6 space-y-4">
+              <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
                 HOME
               </a>
-              <a href="#" className="text-foreground hover:text-primary font-medium">
+              <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
                 WHO WE ARE
               </a>
               <div className="space-y-2">
-                <div className="text-foreground font-medium">SERVICES</div>
+                <div className="text-foreground font-medium py-3 px-4">SERVICES</div>
                 {services.map((service) => (
-                  <a key={service} href="#" className="block pl-4 text-muted-foreground hover:text-primary">
+                  <a key={service} href="#" className="block pl-8 pr-4 py-2 text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all">
                     {service}
                   </a>
                 ))}
               </div>
-              <a href="#" className="text-foreground hover:text-primary font-medium">
+              <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
                 PROJECTS
               </a>
-              <a href="#" className="text-foreground hover:text-primary font-medium">
+              <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
                 CONTACT US
               </a>
-              <a href="#" className="text-foreground hover:text-primary font-medium">
+              <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
                 CAREER
               </a>
             </nav>
