@@ -2,23 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* GeoTerrain Design System - Professional geosciences consulting theme */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* GeoTerrain brand colors - professional green palette */
+    --primary: 147 45% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 147 35% 45%;
+    --primary-dark: 147 55% 25%;
+
+    /* Earth-inspired accent colors */
+    --earth-blue: 200 60% 45%;
+    --earth-brown: 25 35% 35%;
+    --earth-gold: 45 85% 55%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
