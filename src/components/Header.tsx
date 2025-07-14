@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react";home
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -36,16 +36,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
-              HOME
+              Home
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
-              WHO WE ARE
+              Who we are
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary font-medium transition-all duration-300 group">
-                SERVICES 
+                Services
                 <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background/95 backdrop-blur-lg border border-border/50 shadow-xl rounded-xl p-2 mt-2">
@@ -57,15 +57,15 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
-              PROJECTS
+              Pprojects
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
-              CONTACT US
+              Contact us
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a href="#" className="text-foreground hover:text-primary font-medium transition-all duration-300 relative group">
-              CAREER
+              Career
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
@@ -86,10 +86,10 @@ const Header = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border/50 shadow-xl">
             <nav className="container mx-auto px-4 py-6 space-y-4">
               <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
-                HOME
+                Home
               </a>
               <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
-                WHO WE ARE
+                Who we are
               </a>
               <div className="space-y-2">
                 <div className="text-foreground font-medium py-3 px-4">SERVICES</div>
@@ -100,13 +100,13 @@ const Header = () => {
                 ))}
               </div>
               <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
-                PROJECTS
+                Projects
               </a>
               <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
-                CONTACT US
+                Contact us
               </a>
               <a href="#" className="block text-foreground hover:text-primary font-medium py-3 px-4 rounded-lg hover:bg-primary/5 transition-all">
-                CAREER
+                Career
               </a>
             </nav>
           </div>
